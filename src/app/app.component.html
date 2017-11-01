@@ -1,0 +1,48 @@
+<div class="container">
+
+  <h2>Ecs Coaching Data Display</h2>
+  <p class="lead">
+    Showing Data by sending an HTTP get request to remote server
+  </p>
+  
+  <hr />
+  <div class="method">
+    <div class="row margin-0 list-header hidden-sm hidden-xs">
+      <div class="col-md-4">
+        <div class="header">Rank</div>
+      </div>
+      <div class="col-md-4">
+        <div class="header">Answer</div>
+      </div>
+      <div class="col-md-4">
+        <div class="header">Confidence</div>
+      </div>      
+    </div>
+       
+    <div class="row margin-0" *ngFor="let ecsdata of ecscoachigData">
+      <div class="col-md-4">
+        <div class="cell">
+          <div class="propertyname">
+            {{ecsdata.rank}}
+            <span class="mobile-isrequired">[Required]</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="cell">
+          <div class="description">
+            {{ecsdata.answer}}
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="cell">
+          <div class="isrequired">
+            {{ecsdata.confidence}}
+          </div>
+        </div>
+      </div>      
+    </div>
+      
+  </div>
+</div>
